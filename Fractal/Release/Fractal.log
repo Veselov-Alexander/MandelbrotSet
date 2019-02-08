@@ -1,0 +1,19 @@
+﻿  color.cpp
+  image.cpp
+d:\projects\c++ projects\fractal\fractal\image.cpp(108): warning C4018: <: несоответствие типов со знаком и без знака
+  main.cpp
+  pixel.cpp
+  point.cpp
+  program.cpp
+d:\projects\c++ projects\fractal\fractal\program.cpp(30): warning C4018: <: несоответствие типов со знаком и без знака
+d:\projects\c++ projects\fractal\fractal\program.cpp(32): warning C4018: <: несоответствие типов со знаком и без знака
+d:\projects\c++ projects\fractal\fractal\program.cpp(133): warning C4018: <: несоответствие типов со знаком и без знака
+d:\projects\c++ projects\fractal\fractal\program.cpp(135): warning C4018: <: несоответствие типов со знаком и без знака
+d:\projects\c++ projects\fractal\fractal\program.cpp(151): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\time.h(476): note:  см. объявление "ctime"
+  Создание кода
+  0 of 324 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  Fractal.vcxproj -> D:\Projects\C++ Projects\Fractal\Release\Fractal.exe
