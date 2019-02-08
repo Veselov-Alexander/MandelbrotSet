@@ -130,8 +130,8 @@ Color Pixel<T>::display_type_4(unsigned iterations)
 template <typename T>
 void Pixel<T>::draw() const
 {
-    glBegin(GL_POINTS);
+
     color.set();
     glVertex2d(location.x, location.y);
-    glEnd();
+
 }

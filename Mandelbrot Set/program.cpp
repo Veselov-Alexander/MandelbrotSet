@@ -9,12 +9,13 @@ double                      multiplier;
 T                           default_zoom, zoom;
 vector<vector<Pixel<T>>>    map;
 Point<T>                    offset;
-
+bool                        need_to_display;
 
 void initialize(unsigned _width, unsigned _height, unsigned _max_iterations)
 {
     width = _width;
     height = _height;
+    need_to_display = true;
     max_iterations = _max_iterations;
     multiplier = 1.0;
     mode = 2;
@@ -35,11 +36,17 @@ void process_map()
             map[x][y] = Pixel<T>(point);
         }
     }
+    need_to_display = true;
 }
 
 void display()
 {
+    if (!need_to_display)
+    {
+        return;
+    }
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glBegin(GL_POINTS);
     for (vector<Pixel<T>> &line : map)
     {
         for (Pixel<T> &pixel : line)
@@ -47,13 +54,15 @@ void display()
             pixel.draw();
         }
     }
+    glEnd();
     glutSwapBuffers();
+    need_to_display = false;
 }
 
 void keyboard(unsigned char key, int x, int y)
 {
-    long double dx = zoom / 5.0 * width;
-    long double dy = zoom / 5.0 * height;
+    long double dx = zoom / 10.0 * width;
+    long double dy = zoom / 10.0 * height;
     switch (key)
     {
     case 'e':
