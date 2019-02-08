@@ -1,1 +1,0 @@
-Fractal.exe 480 360
